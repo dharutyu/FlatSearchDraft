@@ -13,7 +13,7 @@
             }
             return {
                 parse: parse,
-                changeLocation: changeLocation
+                changeLocation: changeLocation 
             }
         }];
     });
