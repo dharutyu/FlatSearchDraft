@@ -1,4 +1,4 @@
-﻿(function (define, angular) {
+﻿(function () {
   'use strict';
   define(function () {
     return ['$routeProvider', "$locationProvider", function ($routeProvider, $locationProvider) {
@@ -17,4 +17,4 @@
             
     }];
   });
-})(define, angular);
+}());

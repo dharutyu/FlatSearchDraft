@@ -1,11 +1,8 @@
-﻿
-require.config({
-    baseUrl: "/app",
+﻿require.config({
+    baseUrl: "../app",
     paths: {
-        'angular': '/scripts/angular',
-        'angular-amd': '/scripts/angular-amd',
-        'angular-route': '/scripts/angular-route',
-        'jquery': '/scripts/jquery-1.10.2',
+        'angular': '../scripts/angular',
+        'angular-route': '../scripts/angular-route',
         'app': "app",
         'appConfig': 'app.config',
         'coreModule': '_core/coreModule',
@@ -15,57 +12,14 @@ require.config({
     },
     shim: {
         'angular': {
-            deps: [
-                'jquery']
+            exports: "angular"
+           
         },
         'angular-route': {
             deps: [
                 'angular'
             ]
-        },
-        'app': {
-            deps: [
-                'angular',
-                'angular-route',
-
-                'appConfig',
-                'homeModule',
-                'searchModule',
-                'coreModule']
-        },
-        'appConfig':{
-            deps: [
-                'angular'
-            ]
-        },
-        'coreModule': {
-            deps: [
-                'angular',
-                'angular-route'
-               
-            ]
-        },
-        'uiModule': {
-            deps: [
-                'angular'
-            ]
-        },
-        'homeModule': {
-            deps: [
-                'angular'
-            ]
-        },
-        'searchModule': {
-            deps: [
-                'angular',
-                'coreModule',
-                'uiModule'
-            ]
         }
-
-    }
-});
-
-require(['app'], function (app) {
-    angular.bootstrap(document, ['app']);
+    },
+    deps: ['app.bootstrap']
 });

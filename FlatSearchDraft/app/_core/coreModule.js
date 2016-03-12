@@ -1,11 +1,8 @@
 ﻿
-(function (define, angular) {
+(function () {
     'use strict';
     define(['_core/services/routeProviderService'], function (routeProviderService) {
-        var moduleName = 'coreModule';
-        var coreModule = angular.module(moduleName, ['ngRoute']).
-        service('routeProviderService', routeProviderService);
-
-        return coreModule;
+        return angular.module('coreModule', ['ngRoute']).
+            service('routeProviderService', routeProviderService);
     })
-})(define, angular);
+}());

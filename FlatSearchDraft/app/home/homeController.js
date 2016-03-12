@@ -1,4 +1,4 @@
-﻿(function (define, angular) {
+﻿(function () {
     'use strict';
 
     define(function () {
@@ -6,4 +6,4 @@
             $scope.test = 'home';
         }];
     });
-})(define, angular);
+}());

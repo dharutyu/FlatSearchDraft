@@ -1,4 +1,4 @@
-﻿(function (define, angular) {
+﻿(function () {
     'use strict';
     define(function () {       
         return ['$scope', 'routeProviderService', function ($scope, routeProviderService) {        
@@ -19,4 +19,4 @@
             };
         }];
     });
-})(define, angular);
+}());

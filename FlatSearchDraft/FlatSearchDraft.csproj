@@ -192,10 +192,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app-built\app.js" />
+    <Content Include="app\app-live.js" />
     <Content Include="app\app.js" />
+    <Content Include="app\app.bootstrap.js" />
     <Content Include="app\home\homeController.js" />
     <Content Include="app\home\homeModule.js" />
     <Content Include="app\home\homeView.html" />
+    <Content Include="app-built\index-live.html" />
+    <Content Include="app\index-live.html" />
     <Content Include="app\index.html" />
     <Content Include="app\main.js" />
     <Content Include="app\search\index.html" />
@@ -254,6 +259,7 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="_build\build.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1048,6 +1054,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="_build\build.cmd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\account\login\" />
@@ -1106,6 +1113,10 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

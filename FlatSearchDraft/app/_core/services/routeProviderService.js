@@ -1,7 +1,7 @@
-﻿(function (define, angular) {
+﻿(function () {
     'use strict';
 
-    define(function () {
+    define([], function () {
 
         return ["$location", '$routeParams', function ($location, $routeParams) {
 
@@ -17,4 +17,4 @@
             }
         }];
     });
-})(define, angular);
+}());

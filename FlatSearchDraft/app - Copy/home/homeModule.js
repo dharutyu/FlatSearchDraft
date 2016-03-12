@@ -2,8 +2,13 @@
     'use strict';
 
     define(['home/homeController'], function (homeController) {
-        return angular.module('homeModule', [])
-            .controller('homeController', homeController);
-    });
 
+        var moduleName = 'homeModule';
+
+        var searchModule = angular.module(moduleName, [])
+            .controller('homeController', homeController);
+
+        return searchModule;
+    });
+    
 }());

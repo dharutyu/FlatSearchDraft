@@ -3,7 +3,11 @@
 
     define(['search/searchController'], function (searchController) {
 
-        return angular.module('searchModule', [])
+        var moduleName = 'searchModule';
+
+        var searchModule = angular.module(moduleName, [])
             .controller('searchController', searchController);
+        
+        return searchModule;
     });
 }());

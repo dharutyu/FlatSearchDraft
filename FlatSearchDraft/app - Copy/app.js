@@ -11,14 +11,15 @@
         'searchModule'
 
     ], function (angular, ngRoute, appConfig) {
-
-        return angular.module('app', [
+        var moduleName = 'app';
+        var app = angular.module(moduleName, [
             'ngRoute',
 
             'coreModule',
             'uiModule',
-            'homeModule',
-            'searchModule'])
-            .config(appConfig);
+            'homeModule', 
+            'searchModule']);
+        app.config(appConfig);
+        return app;
     })
 }());

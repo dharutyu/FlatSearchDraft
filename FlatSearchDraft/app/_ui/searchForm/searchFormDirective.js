@@ -1,7 +1,7 @@
-﻿(function (define, angular) {
+﻿(function () {
     'use strict';
     define([], function () {
-        var searchFormDirective = function () {
+        return function () {
             return {
                 restrict: 'E',
                 replace: true,
@@ -29,7 +29,5 @@
                 templateUrl: '_ui/searchForm/searchFormDirective.html'
             };
         };
-
-        return searchFormDirective;
     });
-})(define, angular);
+}());
